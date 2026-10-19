@@ -76,10 +76,10 @@
 <h2 id="location">3. Location and Apple Maps</h2>
 <p>Vakat calculates prayer times on your device from the city you choose. City, coordinates and time zone stay on your device.</p>
 <ul>
-  <li><strong>Use my location:</strong> iOS asks for your permission first, only for while you are using Vakat. Vakat determines your location once and asks Apple Maps which place it is; for this, the position is sent to Apple. After that, Vakat does not request your location again, not in the background either. Vakat only asks for your approximate location; prayer times need no more.</li>
+  <li><strong>Use my location:</strong> iOS asks for your permission first, only for while you are using Vakat. Vakat determines your location once and asks Apple Maps which place it is; for this, the position is sent to Apple. Otherwise Vakat does not request your location, not in the background either; the only exception is the Qibla compass (below). Vakat only asks for your approximate location; prayer times and the compass need no more.</li>
   <li><strong>City search:</strong> What you type into the search is sent to Apple so that suggestions appear. During setup, Vakat also searches Apple Maps for the city of your time zone (for “Europe/Paris”, Paris) to suggest it to you.</li>
   <li><strong>Mosques nearby:</strong> Vakat sends the area around your city (about 20 kilometres) and the word “mosque” to Apple Maps.</li>
-  <li><strong>Qibla compass:</strong> Vakat calculates the direction from your city and turns it with your device’s compass. Nothing is sent.</li>
+  <li><strong>Qibla compass:</strong> Vakat calculates the direction from your city and turns it with your device’s compass. If you allowed location access, the compass uses your approximate location while it is open, to find true north. Nothing is sent or stored.</li>
 </ul>
 <p>Apple processes these requests under its own <a href="https://www.apple.com/legal/privacy/en-ww/">privacy policy</a>. We receive nothing from it. The legal basis is the feature you use (Art. 6(1)(b) GDPR).</p>
 
@@ -122,6 +122,9 @@
   <li><strong>Nudges</strong> are deleted by Vakat as soon as you dismiss them, otherwise after one to two days, when either of you opens the Circle again.</li>
 </ul>
 <p>Firebase keeps your anonymous ID until you withdraw your consent. If you delete Vakat without leaving the Circle, your name stays in the Circle; your light goes out by itself. Your name stays until the Circle is disbanded or the person who started it removes you. The ID stays in your device’s keychain: if you reinstall Vakat and consent again, you find your Circle again and can leave it. Or write to us and we will delete your entry. To do so, tell us your name in the Circle and the code.</p>
+
+<h3 id="report">4.6 Hiding and reporting</h3>
+<p>Long-press a name in the Circle: <strong>Hide name</strong> no longer shows that name and its nudges on your device; which names you hide is stored only on your device. <strong>Report</strong> opens an e-mail to us with that name and the Circle code; you decide whether to send it. We use it only to look into the report and to reply to you (Art. 6(1)(f) GDPR), and delete it once the matter is settled.</p>
 
 <h2 id="lock">5. App Lock (Screen Time)</h2>
 <p>App Lock uses Apple’s Screen Time, for yourself. You choose which apps are locked in a window provided by Apple. Vakat only receives placeholders (tokens) for this and does not learn which apps or websites you choose or how long you use them.</p>

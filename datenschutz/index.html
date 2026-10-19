@@ -76,10 +76,10 @@
 <h2 id="ort">3. Ort und Apple Karten</h2>
 <p>Vakat berechnet die Gebetszeiten auf deinem Gerät aus der Stadt, die du wählst. Stadt, Koordinaten und Zeitzone bleiben auf deinem Gerät.</p>
 <ul>
-  <li><strong>Meinen Standort verwenden:</strong> iOS fragt dich vorher um Erlaubnis, nur für die Zeit, in der du Vakat benutzt. Vakat bestimmt deinen Standort einmal und fragt Apple Karten, welcher Ort das ist; dafür geht die Position an Apple. Danach fragt Vakat den Standort nicht weiter ab, auch nicht im Hintergrund. Vakat fragt nur nach deinem ungefähren Standort; mehr brauchen die Gebetszeiten nicht.</li>
+  <li><strong>Meinen Standort verwenden:</strong> iOS fragt dich vorher um Erlaubnis, nur für die Zeit, in der du Vakat benutzt. Vakat bestimmt deinen Standort einmal und fragt Apple Karten, welcher Ort das ist; dafür geht die Position an Apple. Sonst fragt Vakat den Standort nicht ab, auch nicht im Hintergrund; die einzige Ausnahme ist der Qibla-Kompass (unten). Vakat fragt nur nach deinem ungefähren Standort; mehr brauchen Gebetszeiten und Kompass nicht.</li>
   <li><strong>Städtesuche:</strong> Was du in die Suche tippst, geht an Apple, damit Vorschläge erscheinen. Beim Einrichten sucht Vakat außerdem die Stadt deiner Zeitzone bei Apple (bei „Europe/Paris“ etwa Paris), um sie dir vorzuschlagen.</li>
   <li><strong>Moscheen in der Nähe:</strong> Vakat schickt den Umkreis deiner Stadt (etwa 20 Kilometer) und das Wort „Moschee“ an Apple Karten.</li>
-  <li><strong>Qibla-Kompass:</strong> Die Richtung berechnet Vakat aus deiner Stadt, gedreht wird mit dem Kompass deines Geräts. Dabei wird nichts gesendet.</li>
+  <li><strong>Qibla-Kompass:</strong> Die Richtung berechnet Vakat aus deiner Stadt, gedreht wird mit dem Kompass deines Geräts. Hast du den Standort erlaubt, nutzt der Kompass deinen ungefähren Standort, solange er offen ist, um den geografischen Norden zu finden. Dabei wird nichts gesendet oder gespeichert.</li>
 </ul>
 <p>Apple verarbeitet diese Anfragen nach seiner eigenen <a href="https://www.apple.com/legal/privacy/de-ww/">Datenschutzrichtlinie</a>. Wir erhalten davon nichts. Rechtsgrundlage ist die Funktion, die du nutzt (Art. 6 Abs. 1 lit. b DSGVO).</p>
 
@@ -122,6 +122,9 @@
   <li><strong>Anstupser</strong> löscht Vakat, sobald du sie ausblendest, sonst nach ein bis zwei Tagen, wenn einer von euch beiden den Kreis wieder öffnet.</li>
 </ul>
 <p>Deine anonyme Kennung speichert Firebase, bis du die Einwilligung widerrufst. Löschst du Vakat, ohne den Kreis zu verlassen, bleibt dein Name im Kreis stehen; dein Licht geht von selbst aus. Der Name bleibt, bis der Kreis aufgelöst wird oder dich die Person, die ihn gegründet hat, herausnimmt. Die Kennung bleibt im Schlüsselbund deines Geräts: Installierst du Vakat neu und willigst wieder ein, findest du deinen Kreis wieder und kannst ihn verlassen. Oder schreib uns, dann löschen wir deinen Eintrag. Nenn uns dafür deinen Namen im Kreis und den Code.</p>
+
+<h3 id="melden">4.6 Ausblenden und melden</h3>
+<p>Lange auf einen Namen im Kreis drücken: <strong>Name ausblenden</strong> zeigt diesen Namen und seine Anstupser auf deinem Gerät nicht mehr; welche Namen du ausblendest, speichert Vakat nur auf deinem Gerät. <strong>Melden</strong> öffnet eine E-Mail an uns mit diesem Namen und dem Kreis-Code; du entscheidest, ob du sie abschickst. Wir nutzen sie nur, um der Meldung nachzugehen und dir zu antworten (Art. 6 Abs. 1 lit. f DSGVO), und löschen sie, wenn die Sache erledigt ist.</p>
 
 <h2 id="sperre">5. App-Sperre (Bildschirmzeit)</h2>
 <p>Die App-Sperre nutzt die Bildschirmzeit von Apple, für dich selbst. Welche Apps gesperrt werden, wählst du in einem Fenster von Apple. Vakat erhält dafür nur Platzhalter (Tokens) und erfährt nicht, welche Apps oder Webseiten du wählst oder wie lange du sie nutzt.</p>
