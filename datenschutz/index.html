@@ -23,13 +23,13 @@
 
 <main>
 <h1>Datenschutz&shy;erklärung</h1>
-<p class="meta">für die iPhone-App Vakat · Stand: 29. Oktober 2026</p>
+<p class="meta">für die iPhone-App Vakat · Stand: 4. November 2026</p>
 
 <section class="summary" aria-labelledby="kurz">
   <h2 id="kurz">Kurz gesagt</h2>
   <ul>
     <li>Deine Gebete bleiben auf deinem Handy. Was du einträgst, bekommen wir nicht zu sehen.</li>
-    <li>Vakat braucht kein Konto. Es gibt keine Werbung und kein Tracking. Ausgewertet werden nur Abos und Käufe, ohne Gebetsdaten (<a href="#kaeufe">Abschnitt 8</a>).</li>
+    <li>Vakat braucht kein Konto. Es gibt keine Werbung und kein Tracking. Ausgewertet wird nur, wie die Einrichtung und die Abo-Seite genutzt werden und welche Abos es gibt, ohne Gebetsdaten (<a href="#kaeufe">Abschnitt 8</a> und <a href="#analyse">9</a>).</li>
     <li>Der Kreis mit Freunden ist freiwillig. Erst nach deiner ausdrücklichen Einwilligung sieht dein Kreis deinen Namen im Kreis und ob dein Licht heute brennt. Dein Gebetsprotokoll bleibt auch dann auf deinem Handy.</li>
   </ul>
 </section>
@@ -44,6 +44,7 @@
     <li><a href="#widgets">Widgets, Live Activity, Siri und Kontrollzentrum</a></li>
     <li><a href="#mitteilungen">Mitteilungen, Wecker, Fotos und Teilen</a></li>
     <li><a href="#kaeufe">Käufe und Abos</a></li>
+    <li><a href="#analyse">Nutzungsanalyse mit Google Analytics</a></li>
     <li><a href="#apple">Was Apple uns weitergibt</a></li>
     <li><a href="#webseite">Diese Webseite</a></li>
     <li><a href="#rechte">Deine Rechte</a></li>
@@ -108,7 +109,7 @@
 <ul>
   <li>Die Daten des Kreises liegen in Cloud Firestore in Frankfurt am Main (Region europe-west3). Vakat spricht Firestore direkt über die verschlüsselte Schnittstelle (HTTPS) an.</li>
   <li>Für die anonyme Anmeldung nutzt Vakat Firebase Authentication. Dieser Dienst läuft nur in Rechenzentren in den USA. Google verarbeitet dabei auch deine IP-Adresse und Geräteangaben (User-Agent), um Missbrauch zu verhindern, und speichert IP-Adressen einige Wochen. Die Übermittlung in die USA stützt sich auf den Angemessenheitsbeschluss der EU-Kommission zum EU-US Data Privacy Framework, unter dem Google zertifiziert ist.</li>
-  <li>Vakat nutzt kein Firebase Analytics, kein Crashlytics und kein Cloud Messaging. Die automatische Datenerhebung von Firebase ist abgeschaltet.</li>
+  <li>Die Kreis-Daten gehen nie an Google Analytics (<a href="#analyse">Abschnitt 9</a>). Vakat nutzt kein Crashlytics und kein Cloud Messaging.</li>
 </ul>
 <p>Mehr dazu bei Google: <a href="https://firebase.google.com/support/privacy">Datenschutz und Sicherheit in Firebase</a>.</p>
 
@@ -147,25 +148,37 @@
   <li>deine Käufe und Abos aus dem App Store: Produkt, Preis und Währung, Zeitpunkte, Testphase, Verlängerung, Kündigung und Erstattung</li>
   <li>das Land deines App Stores, Gerätemodell, iOS- und App-Version sowie deine IP-Adresse</li>
 </ul>
-<p>Verlängerungen, Kündigungen und Erstattungen meldet Apple auch direkt an RevenueCat (App Store Server Notifications), auch für Abos, die vor dem Einbau von RevenueCat begonnen haben. Deine Gebete, Pausen, deinen Standort, den Kreis und die Werbe-ID erhält RevenueCat nie; Vakat setzt bei RevenueCat keine weiteren Merkmale. RevenueCat verarbeitet die Daten in unserem Auftrag in den USA; die Übermittlung ist durch Standardvertragsklauseln abgesichert. Kaufdaten bewahren wir so lange auf, wie es für die Auswertung und steuerliche Pflichten nötig ist. Rechtsgrundlage ist unser berechtigtes Interesse, unsere Abos auszuwerten (Art. 6 Abs. 1 lit. f DSGVO). Du kannst dem jederzeit per E-Mail widersprechen (<a href="#rechte">Abschnitt 11</a>). Es gilt außerdem die <a href="https://www.revenuecat.com/privacy">Datenschutzerklärung von RevenueCat</a>.</p>
+<p>Verlängerungen, Kündigungen und Erstattungen meldet Apple auch direkt an RevenueCat (App Store Server Notifications), auch für Abos, die vor dem Einbau von RevenueCat begonnen haben. Deine Gebete, Pausen, deinen Standort, den Kreis und die Werbe-ID erhält RevenueCat nie; Vakat setzt bei RevenueCat keine weiteren Merkmale. RevenueCat verarbeitet die Daten in unserem Auftrag in den USA; die Übermittlung ist durch Standardvertragsklauseln abgesichert. Kaufdaten bewahren wir so lange auf, wie es für die Auswertung und steuerliche Pflichten nötig ist. Rechtsgrundlage ist unser berechtigtes Interesse, unsere Abos auszuwerten (Art. 6 Abs. 1 lit. f DSGVO). Du kannst dem jederzeit per E-Mail widersprechen (<a href="#rechte">Abschnitt 12</a>). Es gilt außerdem die <a href="https://www.revenuecat.com/privacy">Datenschutzerklärung von RevenueCat</a>.</p>
 
-<h2 id="apple">9. Was Apple uns weitergibt</h2>
+<h2 id="analyse">9. Nutzungsanalyse mit Google Analytics</h2>
+<p>Damit wir sehen, wo die Einrichtung hakt und wie die Abo-Seite ankommt, nutzt Vakat Google Analytics for Firebase von Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland (zusammen mit Google LLC, USA). Vakat sendet dafür:</p>
+<ul>
+  <li>welche Schritte der Einrichtung erscheinen und verlassen werden, nach wie vielen Sekunden und mit welchem Knopf (weiter, überspringen, jetzt nicht, zurück), und dass bei einer Frage eine Antwort angetippt wurde</li>
+  <li>Antworten, die nichts über deine Gebete sagen: die gewählte Sprache, ob du einen Namen eingetragen hast (nicht welchen), wie du deinen Ort gefunden hast (Vorschlag, Standort oder Suche, nicht welchen Ort) und ob du Erinnerungen, die Vorwarnung und die App-Sperre eingeschaltet hast</li>
+  <li>auf der Abo-Seite: dass sie erscheint, welcher Plan gewählt wird, das Tippen auf den Kauf-Knopf und wie der Kauf ausgeht, „Wiederherstellen“, die Links zu Nutzungsbedingungen und Datenschutz und wie lange die Seite offen war; dazu die Antwort auf „Soll Vakat dich erinnern?“ davor</li>
+  <li>was Google Analytics von selbst erfasst: das erste Öffnen, Sitzungen und ihre Dauer sowie App-Updates</li>
+</ul>
+<p>Nie gesendet werden dein Name, deine Stadt und dein Standort, dein Gebetsprotokoll, Pausen, Fasten, der Kreis und deine Antworten zu deinen Gebeten (Ziel, welches Asr, wobei wir dich unterstützen sollen). Bei diesen Fragen zählt nur, ob du geantwortet oder übersprungen hast.</p>
+<p>Google erhält dabei eine zufällige App-Instanz-Kennung, Gerätemodell, iOS- und App-Version, Sprache sowie ungefähr Land und Region, die aus deiner IP-Adresse bestimmt werden; die IP-Adresse selbst speichert Google Analytics nicht. Vakat nutzt keine Werbe-ID (IDFA), nicht die Gerätekennung für Entwickler (IDFV) und keine Werbefunktionen von Google. Google verarbeitet die Daten in unserem Auftrag, auch in den USA; die Übermittlung stützt sich auf das EU-US Data Privacy Framework, unter dem Google zertifiziert ist. Google Analytics löscht die Daten nach höchstens 14 Monaten.</p>
+<p>Rechtsgrundlage ist unser berechtigtes Interesse, die Einrichtung und die Abo-Seite zu verbessern (Art. 6 Abs. 1 lit. f DSGVO). Du kannst jederzeit widersprechen: In der App unter „Ich“ → „Datenschutz“ den Schalter „Nutzungsanalyse erlauben“ ausschalten. Dann sendet Vakat nichts mehr an Google Analytics und löscht die App-Instanz-Kennung auf deinem Gerät.</p>
+
+<h2 id="apple">10. Was Apple uns weitergibt</h2>
 <p>Apple zeigt uns in App Store Connect zusammengefasste Zahlen, etwa zu Downloads und Käufen, ohne Namen oder Kontaktdaten. Absturzberichte und Nutzungsstatistiken bekommen wir nur, wenn du in den Einstellungen von iOS „Mit App-Entwicklern teilen“ eingeschaltet hast. Auch daraus erfahren wir nicht, wer du bist. Wir nutzen sie nur, um Fehler zu finden und zu beheben (Art. 6 Abs. 1 lit. f DSGVO).</p>
 
-<h2 id="webseite">10. Diese Webseite</h2>
+<h2 id="webseite">11. Diese Webseite</h2>
 <p>Diese Seite liegt bei GitHub Pages (GitHub, Inc., USA). Wenn du sie aufrufst, speichert GitHub deine IP-Adresse aus Sicherheitsgründen. Rechtsgrundlage ist unser berechtigtes Interesse, die Seite sicher bereitzustellen (Art. 6 Abs. 1 lit. f DSGVO). GitHub ist unter dem EU-US Data Privacy Framework zertifiziert; mehr in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>. Die Seite setzt keine Cookies, lädt keine Schriften oder Skripte von anderen Servern und zählt keine Besuche.</p>
 
-<h2 id="rechte">11. Deine Rechte</h2>
+<h2 id="rechte">12. Deine Rechte</h2>
 <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15 bis 21 DSGVO). Eine Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen, für den Kreis direkt in der App mit „Einwilligung widerrufen“. Die meisten Daten liegen nur auf deinem Gerät; dort kannst du sie selbst ansehen und löschen. Für alles andere schreib an <a href="mailto:david.zwirtmayr@dopaminedept.org">david.zwirtmayr@dopaminedept.org</a>.</p>
 <p>Du kannst dich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel in dem Land, in dem du lebst. In Österreich ist das die Datenschutzbehörde, Barichgasse 40–42, 1030 Wien, <a href="https://dsb.gv.at">dsb.gv.at</a>.</p>
 <p>Du musst Vakat keine personenbezogenen Daten geben; ohne Kreis funktioniert die App vollständig. Es gibt keine automatisierten Entscheidungen und kein Profiling.</p>
 
-<h2 id="aenderungen">12. Änderungen</h2>
+<h2 id="aenderungen">13. Änderungen</h2>
 <p>Ändert sich Vakat so, dass andere Daten verarbeitet werden, passen wir diese Erklärung an. Die aktuelle Fassung steht immer hier. Soll der Kreis einmal mehr teilen als heute, fragt Vakat dich vorher erneut um deine Einwilligung.</p>
 </main>
 
 <footer>
-  <p>Stand: 29. Oktober 2026 · <a href="https://dopaminedept.org/impressum">Impressum</a> · <a href="../privacy/" hreflang="en" lang="en">English version</a></p>
+  <p>Stand: 4. November 2026 · <a href="https://dopaminedept.org/impressum">Impressum</a> · <a href="../privacy/" hreflang="en" lang="en">English version</a></p>
 </footer>
 
 </div>
