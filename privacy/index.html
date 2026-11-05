@@ -23,13 +23,13 @@
 
 <main>
 <h1>Privacy Policy</h1>
-<p class="meta">for the Vakat iPhone app · Last updated: 4 November 2026</p>
+<p class="meta">for the Vakat iPhone app · Last updated: 5 November 2026</p>
 
 <section class="summary" aria-labelledby="short">
   <h2 id="short">In short</h2>
   <ul>
     <li>Your prayers stay on your phone. We never get to see what you log.</li>
-    <li>Vakat needs no account. There are no ads and no tracking. We only evaluate how the setup and the subscription page are used and which subscriptions there are, without any prayer data (<a href="#purchases">sections 8</a> and <a href="#analytics">9</a>).</li>
+    <li>Vakat needs no account; an account is optional (<a href="#account">section 4b</a>). There are no ads and no tracking. We only evaluate how the setup and the subscription page are used and which subscriptions there are, without any prayer data (<a href="#purchases">sections 8</a> and <a href="#analytics">9</a>).</li>
     <li>The Circle with friends is optional. Only after your explicit consent does your Circle see your name in the Circle and whether your light is lit today. Even then, your prayer log stays on your phone.</li>
   </ul>
 </section>
@@ -39,7 +39,7 @@
     <li><a href="#controller">Data controller</a></li>
     <li><a href="#device">What stays on your phone</a></li>
     <li><a href="#location">Location and Apple Maps</a></li>
-    <li><a href="#circle">The Circle</a></li>
+    <li><a href="#circle">The Circle</a> (with <a href="#likes">4a Likes</a>, <a href="#account">4b Account</a>)</li>
     <li><a href="#lock">App Lock (Screen Time)</a></li>
     <li><a href="#widgets">Widgets, Live Activity, Siri and Control Center</a></li>
     <li><a href="#notifications">Notifications, alarms, photos and sharing</a></li>
@@ -79,6 +79,7 @@
 <ul>
   <li><strong>Use my location:</strong> iOS asks for your permission first, only for while you are using Vakat. Vakat determines your location once and asks Apple Maps which place it is; for this, the position is sent to Apple. Otherwise Vakat does not request your location, not in the background either; the only exception is the Qibla compass (below). Vakat only asks for your approximate location; prayer times and the compass need no more.</li>
   <li><strong>City search:</strong> What you type into the search is sent to Apple so that suggestions appear. During setup, Vakat also searches Apple Maps for the city of your time zone (for “Europe/Paris”, Paris) to suggest it to you.</li>
+  <li><strong>Globe during setup:</strong> Once you choose your city, a globe from Apple Maps turns to it and shows the way to Mecca. For this, Vakat loads map images of that area from Apple.</li>
   <li><strong>Mosques nearby:</strong> Vakat sends the area around your city (about 20 kilometres) and the word “mosque” to Apple Maps.</li>
   <li><strong>Qibla compass:</strong> Vakat calculates the direction from your city and turns it with your device’s compass. If you allowed location access, the compass uses your approximate location while it is open, to find true north. Nothing is sent or stored.</li>
 </ul>
@@ -87,7 +88,7 @@
 <h2 id="circle">4. The Circle</h2>
 
 <h3 id="consent">4.1 Optional, and only with your consent</h3>
-<p>In the Circle, you see whose light is lit for Fajr today. The Circle is optional. Before anything is shared, Vakat asks for your explicit consent, because a prayer circle reveals something about your faith (Art. 6(1)(a) and Art. 9(2)(a) GDPR). Until then, Vakat does not connect to the server; Firebase is not even started before that. Vakat stores when you consented only on your device. Without the Circle, everything else in Vakat works just the same.</p>
+<p>In the Circle, you see whose light is lit for Fajr today. The Circle is optional. Before anything is shared, Vakat asks for your explicit consent, because a prayer circle reveals something about your faith (Art. 6(1)(a) and Art. 9(2)(a) GDPR). Until then, no Circle data goes to the server. Vakat stores when you consented only on your device. Without the Circle, everything else in Vakat works just the same.</p>
 
 <h3 id="stored">4.2 What is stored</h3>
 <p>About you:</p>
@@ -127,6 +128,14 @@
 <h3 id="report">4.6 Hiding and reporting</h3>
 <p>Long-press a name in the Circle: <strong>Hide name</strong> no longer shows that name and its nudges on your device; which names you hide is stored only on your device. <strong>Report</strong> opens an e-mail to us with that name and the Circle code; you decide whether to send it. We use it only to look into the report and to reply to you (Art. 6(1)(f) GDPR), and delete it once the matter is settled.</p>
 
+<h2 id="likes">4a. Likes on verses</h2>
+<p>Your heart on a verse stays on your device. At your first like, Vakat asks whether it should be counted anonymously. Only if you choose “Count anonymously” does Vakat also count your likes on the server, so that you and others can see how many people like a verse. Cloud Firestore in Frankfurt am Main (europe-west3) then keeps only one number per verse, not who liked it; each like changes it by one. For this, your device signs in with the same anonymous ID as for the Circle (Firebase Authentication, section 4.4). Because a like on a verse of the Quran can reveal something about your faith, the legal basis is your explicit consent (Art. 6(1)(a) and Art. 9(2)(a) GDPR). Under “Privacy” in the app you withdraw it with a switch; Vakat then takes your likes back off the numbers and sends nothing more. If you choose “Only on my phone”, nothing goes to the server and you see no numbers.</p>
+
+<h2 id="account">4b. Account (optional)</h2>
+<p>An account is optional; Vakat works without one, with “Skip” at the first start or never later. If you sign in with Apple, Google or your email address, Firebase Authentication (section 4.4) stores your email address, an identifier and, if Apple or Google pass it on, your name; with an email address also your password, only in encrypted form. With “Sign in with Apple” you can hide your email address. “Continue with Google” opens Google’s sign-in page; Google’s privacy policy governs what Google processes there.</p>
+<p>With an account, your Circle and your likes stay, even on a new device: the Circle is tied to the same identifier as the anonymous one before, and Vakat keeps your likes as a list of verses in Cloud Firestore in Frankfurt am Main (europe-west3) (<code>users/{identifier}</code>) that only you can read. If you chose “Only on my phone” for likes, Vakat does not keep them. Your prayer log, pauses, fasting and your settings stay on your device. The account never goes to Google Analytics or RevenueCat.</p>
+<p>Because an account with a prayer app can reveal your faith, the legal basis is the explicit consent you give by signing in (Art. 6(1)(a) and Art. 9(2)(a) GDPR). In the app under “Me” → “Account” you can sign out or delete the account; Vakat then deletes the account, your place in the Circle and the kept likes. Signing out alone deletes nothing.</p>
+
 <h2 id="lock">5. App Lock (Screen Time)</h2>
 <p>App Lock uses Apple’s Screen Time, for yourself. You choose which apps are locked in a window provided by Apple. Vakat only receives placeholders (tokens) for this and does not learn which apps or websites you choose or how long you use them.</p>
 <p>So that the lock knows when to let you back in, Vakat keeps the following in a shared storage area on your device (App Group): your lock settings, which prayers of the days around today are logged, whether you have just postponed the lock, and whether a pause is on. Only Vakat and its extensions read this storage. Your prayer log is not in it, and none of it leaves your device.</p>
@@ -156,6 +165,7 @@
   <li>which steps of the setup appear and are left, after how many seconds and with which button (continue, skip, not now, back), and that an answer was tapped on a question</li>
   <li>answers that say nothing about your prayers: the language you chose, whether you entered a name (not which), how you found your place (suggestion, location or search, not which place) and whether you turned on reminders, the early reminder and the App Lock</li>
   <li>on the subscription page: that it appears, which plan is selected, the tap on the purchase button and how the purchase ends, “Restore”, the links to the terms and the privacy policy and how long the page was open; plus the answer to “Should Vakat remind you?” before it</li>
+  <li>whether you chose the figures for women or for men during setup, as the property “figure”, so we can see whether the setup and the subscription page work equally well for both</li>
   <li>what Google Analytics records on its own: the first open, sessions and their length, and app updates</li>
 </ul>
 <p>Never sent: your name, your city and your location, your prayer log, pauses, fasting, the Circle and your answers about your prayers (goal, which Asr, what we should support you with). For these questions it only counts whether you answered or skipped.</p>
@@ -179,7 +189,7 @@
 </main>
 
 <footer>
-  <p>Last updated: 4 November 2026 · <a href="https://dopaminedept.org/impressum" hreflang="de">Legal notice</a> · <a href="../datenschutz/" hreflang="de" lang="de">Deutsche Fassung</a></p>
+  <p>Last updated: 5 November 2026 · <a href="https://dopaminedept.org/impressum" hreflang="de">Legal notice</a> · <a href="../datenschutz/" hreflang="de" lang="de">Deutsche Fassung</a></p>
 </footer>
 
 </div>
