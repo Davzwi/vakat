@@ -23,7 +23,7 @@
 
 <main>
 <h1>Privacy Policy</h1>
-<p class="meta">for the Vakat iPhone app · Last updated: 8 November 2026</p>
+<p class="meta">for the Vakat iPhone app · Last updated: 10 November 2026</p>
 
 <section class="summary" aria-labelledby="short">
   <h2 id="short">In short</h2>
@@ -139,6 +139,7 @@
 <h2 id="lock">5. App Lock (Screen Time)</h2>
 <p>App Lock uses Apple’s Screen Time, for yourself. You choose which apps are locked in a window provided by Apple. Vakat only receives placeholders (tokens) for this and does not learn which apps or websites you choose or how long you use them.</p>
 <p>So that the lock knows when to let you back in, Vakat keeps the following in a shared storage area on your device (App Group): your lock settings, which prayers of the days around today are logged, whether you have just postponed the lock, and whether a pause is on. Only Vakat and its extensions read this storage. Your prayer log is not in it, and none of it leaves your device.</p>
+<p>If you choose the prayer check to unlock, the button on the lock opens Vakat through a notification. There the camera recognizes the first three steps of your prayer (see <a href="#notifications">section 7</a>).</p>
 
 <h2 id="widgets">6. Widgets, Live Activity, Siri and Control Center</h2>
 <p>Widgets, the Live Activity, Siri and Shortcuts, and the button in Control Center run on your device. From the shared storage they read only what they need to display: city, calculation method, your time adjustments, the language and whether the current prayer is already logged or a pause is on. If you log a prayer there, it is noted in the shared storage, and Vakat adds it to your prayer log the next time you open the app. Vakat updates the Live Activity only on the device, without a push server. If you use Siri, Apple processes your voice requests under its own terms.</p>
@@ -146,6 +147,7 @@
 <h2 id="notifications">7. Notifications, alarms, photos and sharing</h2>
 <ul>
   <li><strong>Reminders and the Fajr alarm</strong> are local iOS notifications and alarms. They are scheduled on your device, without a server. This also applies to the reminder before your free trial ends.</li>
+  <li><strong>Camera (photo task and prayer check):</strong> Vakat only uses the camera when you switch it on. For the Fajr alarm’s photo task you take one photo of what you chose, for example your prayer mat. It stays on your device only, not in backups, and is deleted when you switch the photo task off. Your iPhone compares the morning photo with Apple’s image recognition directly on the device and then discards it. For the prayer check of the App Lock and the Fajr alarm, your iPhone reads only your posture from the camera picture (takbir, standing, rukuʿ); nothing is recorded or stored. None of this is sent.</li>
   <li><strong>Photos:</strong> Vakat only asks for permission to add photos, so that you can save cards and verses as images or videos to your Photos. Vakat cannot see your photos.</li>
   <li><strong>Sharing:</strong> Vakat only passes on a weekly card, a verse or an invitation to the Circle when you tap “Share” yourself. You choose what is on it and who gets it. The app you share with processes it under its own rules.</li>
 </ul>
@@ -158,6 +160,10 @@
   <li>the country of your App Store, device model, iOS and app version, and your IP address</li>
 </ul>
 <p>Apple also reports renewals, cancellations and refunds to RevenueCat directly (App Store Server Notifications), including for subscriptions that started before RevenueCat was added. RevenueCat never receives your prayers, pauses, your location, the Circle or the advertising ID; Vakat sets no further attributes in RevenueCat. RevenueCat processes the data on our behalf in the USA; the transfer is safeguarded by standard contractual clauses. We keep purchase data as long as needed for the statistics and for tax obligations. The legal basis is our legitimate interest in evaluating our subscriptions (Art. 6(1)(f) GDPR). You can object at any time by email (<a href="#rights">section 12</a>). <a href="https://www.revenuecat.com/privacy">RevenueCat’s privacy policy</a> also applies.</p>
+<p id="offers"><strong>Comeback price:</strong> If you’ve cancelled your subscription or it has ended, Vakat can show you a lower price for the first year. Vakat checks on your device, from your subscription with Apple, whether that’s possible; for Apple’s own win-back offer, Apple decides who gets it. Which offers you’ve already seen or used is remembered only on your device, including in the keychain, so an offer doesn’t start over after reinstalling. None of this goes to the usage analysis (<a href="#analytics">section 9</a>); RevenueCat receives a purchase at a comeback price like any other purchase. Notifications about offers only come if you turn them on in the app under “Me” → “Vakat Plus”; they are local and use no server.</p>
+<!-- Add once the signing server runs (Comeback.signingURL set), like "Angebote: Signatur" in PrivacyView:
+<p><strong>Signature for promotional offers:</strong> If you buy a comeback price through a promotional offer, Apple requires a signature from us. Vakat fetches it at that moment from our server at Google Cloud in Frankfurt am Main (europe-west3). Only the subscription and the offer are sent, no name, no identifier and no prayer data. Google processes your IP address to protect against abuse; we store none of it.</p>
+-->
 
 <h2 id="analytics">9. Usage analysis with Google Analytics</h2>
 <p>So that we can see where the setup gets stuck and how the subscription page works, Vakat uses Google Analytics for Firebase from Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland (together with Google LLC, USA). For this, Vakat sends:</p>
@@ -189,7 +195,7 @@
 </main>
 
 <footer>
-  <p>Last updated: 8 November 2026 · <a href="https://dopaminedept.org/impressum" hreflang="de">Legal notice</a> · <a href="../datenschutz/" hreflang="de" lang="de">Deutsche Fassung</a></p>
+  <p>Last updated: 10 November 2026 · <a href="https://dopaminedept.org/impressum" hreflang="de">Legal notice</a> · <a href="../datenschutz/" hreflang="de" lang="de">Deutsche Fassung</a></p>
 </footer>
 
 </div>
